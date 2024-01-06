@@ -1,10 +1,10 @@
-import Image from "next/image";
-import { Button } from "./ui/button";
-import Section from "./ui/section";
+import Image from 'next/image';
+import { Button } from './ui/button';
+import Section from './ui/section';
 
 function Home() {
   return (
-    <Section className="md:flex-row md:justify-around py-10">
+    <Section className="md:flex-row md:justify-around">
       {/* Home Text */}
       <div className="max-w-full md:max-w-[60%] flex flex-col justify-between gap-5">
         <div>
@@ -17,21 +17,21 @@ function Home() {
           me to hire me.
         </Section.Text>
         <Image
-          src={"/profil.jpg"}
+          src={'/profil.jpg'}
           alt="Muhammad Randy's Profil Picture"
           width={1051}
           height={1500}
           className="w-[40vw] h-auto md:hidden self-center"
         />
         <div className="flex gap-2 self-center md:self-auto">
-          <Button variant={"primary"}>Download CV</Button>
-          <Button variant={"outlineSecondary"}>Contact Me</Button>
+          <Button variant={'primary'}>Download CV</Button>
+          <Button variant={'outlineSecondary'}>Contact Me</Button>
         </div>
       </div>
       {/* --- */}
 
       <Image
-        src={"/profil.jpg"}
+        src={'/profil.jpg'}
         alt="Muhammad Randy's Profil Picture"
         width={1051}
         height={1500}
