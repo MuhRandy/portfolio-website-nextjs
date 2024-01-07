@@ -1,5 +1,5 @@
-import CardExperience from './ui/card-experience';
-import Section from './ui/section';
+import CardExperience from "./ui/card-experience";
+import { Section, SectionText, SectionTitle } from "./ui/section";
 import {
   IconBrandCss3,
   IconBrandFirebase,
@@ -8,18 +8,20 @@ import {
   IconBrandNextjs,
   IconBrandReact,
   IconBrandTypescript,
-} from '@tabler/icons-react';
+} from "@tabler/icons-react";
 
 function SkillAndExperience() {
+  const skillIconSize = 40;
+  const skillIconSizeTablet = 20;
   return (
     <Section className="gap-7">
-      <div className="flex flex-row items-start justify-start gap-7">
-        <div className="max-w-[70%]">
-          <Section.H1 className="flex flex-col">
+      <div className="flex flex-col md:flex-row items-start justify-start gap-7">
+        <div className="md:max-w-[70%] flex flex-col gap-7">
+          <SectionTitle className="flex flex-col">
             <span>Skill &</span>
             <span>Experience</span>
-          </Section.H1>
-          <Section.Text>
+          </SectionTitle>
+          <SectionText>
             Having pursued a self-directed learning path in web development
             since graduating with my bachelor&apos;s degree, I&apos;ve actively
             engaged with online resources such as YouTube and platforms like
@@ -30,37 +32,60 @@ function SkillAndExperience() {
             commitment to continuous learning and innovation. I am excited to
             contribute my knowledge and expertise to real-world projects and
             further expand my capabilities as a web developer.
-          </Section.Text>
+          </SectionText>
         </div>
-        <div className="max-w-[50%] text-xl font-bold">
-          <ul className="flex flex-col gap-2">
+        <div className="w-[100%] md:max-w-[50%] text-2xl">
+          <ul className="md:flex md:flex-col gap-2 grid grid-cols-2 sm:grid-cols-3">
             <li>
-              <IconBrandHtml5 className="text-orange-600 inline" /> HTML
+              <IconBrandHtml5
+                size={skillIconSize}
+                className="text-orange-600 inline"
+              />
+              HTML
             </li>
             <li>
-              <IconBrandCss3 className=" text-blue-600 inline" /> CSS
+              <IconBrandCss3
+                size={skillIconSize}
+                className="text-blue-600 inline"
+              />
+              CSS
             </li>
             <li>
-              <IconBrandJavascript className="text-yellow-500 inline" />{' '}
+              <IconBrandJavascript
+                size={skillIconSize}
+                className="text-yellow-500 inline"
+              />
               Javascript
             </li>
             <li>
-              <IconBrandTypescript className="text-blue-500 inline" />{' '}
+              <IconBrandTypescript
+                size={skillIconSize}
+                className="text-blue-500 inline"
+              />
               Typescript
             </li>
             <li>
-              <IconBrandReact className="text-blue-400 inline" /> ReactJs
+              <IconBrandReact
+                size={skillIconSize}
+                className="text-blue-400 inline"
+              />
+              ReactJs
             </li>
             <li>
-              <IconBrandFirebase className="text-orange-400 inline" /> Firebase
+              <IconBrandFirebase
+                size={skillIconSize}
+                className="text-orange-400 inline"
+              />
+              Firebase
             </li>
             <li>
-              <IconBrandNextjs className="inline" /> Next.js
+              <IconBrandNextjs size={skillIconSize} className="inline" />
+              Next.js
             </li>
           </ul>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
         <CardExperience
           jobTitle="Frontend Web Developer"
           company="PT. Lorem Ipsum"
