@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { ClassValue } from "clsx";
 import { ReactNode } from "react";
+import { motion } from "framer-motion";
 
 type SectionProps = {
   children: ReactNode;

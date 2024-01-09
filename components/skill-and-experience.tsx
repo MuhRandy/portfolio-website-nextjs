@@ -1,3 +1,4 @@
+import { IconBrandTailwind } from "@tabler/icons-react";
 import CardExperience from "./ui/card-experience";
 import { Section, SectionText, SectionTitle } from "./ui/section";
 import {
@@ -11,8 +12,27 @@ import {
 } from "@tabler/icons-react";
 
 function SkillAndExperience() {
-  const skillIconSize = 40;
-  const skillIconSizeTablet = 20;
+  const skillIconSize = 30;
+  const experiences = [
+    {
+      jobTitle: "Frontend Internship",
+      company: "PT. Lorem Ipsum",
+      jobDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestia's possimus incidunt minima voluptas corporis ipsa aliquam ut fuga illum laborum?",
+    },
+    {
+      jobTitle: "Backend Internship",
+      company: "PT. Lorem Ipsum 2",
+      jobDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestia's possimus incidunt minima voluptas corporis ipsa aliquam ut fuga illum laborum?",
+    },
+    {
+      jobTitle: "Fullstack Internship",
+      company: "PT. Lorem Ipsum 3",
+      jobDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestia's possimus incidunt minima voluptas corporis ipsa aliquam ut fuga illum laborum?",
+    },
+  ];
   return (
     <Section className="gap-7">
       <div className="flex flex-col md:flex-row items-start justify-start gap-7">
@@ -34,7 +54,7 @@ function SkillAndExperience() {
             further expand my capabilities as a web developer.
           </SectionText>
         </div>
-        <div className="w-[100%] md:max-w-[50%] text-2xl">
+        <div className="w-[100%] md:max-w-[50%] text-xl">
           <ul className="md:flex md:flex-col gap-2 grid grid-cols-2 sm:grid-cols-3">
             <li>
               <IconBrandHtml5
@@ -65,6 +85,13 @@ function SkillAndExperience() {
               Typescript
             </li>
             <li>
+              <IconBrandTailwind
+                size={skillIconSize}
+                className="text-teal-500 inline"
+              />
+              TailwindCSS
+            </li>
+            <li>
               <IconBrandReact
                 size={skillIconSize}
                 className="text-blue-400 inline"
@@ -86,27 +113,25 @@ function SkillAndExperience() {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
-        <CardExperience
-          jobTitle="Frontend Web Developer"
-          company="PT. Lorem Ipsum"
-          jobDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
-            possimus incidunt minima voluptas corporis ipsa aliquam ut fuga
-            illum laborum?"
-        />
-        <CardExperience
-          jobTitle="Frontend Web Developer"
-          company="PT. Lorem Ipsum"
-          jobDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
-            possimus incidunt minima voluptas corporis ipsa aliquam ut fuga
-            illum laborum?"
-        />
-        <CardExperience
-          jobTitle="Frontend Web Developer"
-          company="PT. Lorem Ipsum"
-          jobDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
-            possimus incidunt minima voluptas corporis ipsa aliquam ut fuga
-            illum laborum?"
-        />
+        {experiences.map(
+          (
+            experience: {
+              jobTitle: string;
+              company: string;
+              jobDescription: string;
+            },
+            index: number
+          ) => {
+            return (
+              <CardExperience
+                key={index}
+                jobTitle={experience.jobTitle}
+                company={experience.company}
+                jobDescription={experience.jobDescription}
+              />
+            );
+          }
+        )}
       </div>
     </Section>
   );

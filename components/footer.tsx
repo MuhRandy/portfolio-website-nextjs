@@ -11,8 +11,11 @@ import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 function Footer() {
   return (
     <footer>
-      <Section bgColor="slate" className="gap-2 text-xl text-center">
-        <div className="flex gap-3">
+      <Section
+        bgColor="slate"
+        className="gap-2 text-base sm:text-xl text-center"
+      >
+        <div className="flex gap-3 pt-24">
           <IconBrandLinkedin size={35} className="text-blue-500" />
           <IconBrandFacebookFilled size={35} className="text-blue-700" />
           <IconBrandInstagram size={35} className="text-red-500" />
