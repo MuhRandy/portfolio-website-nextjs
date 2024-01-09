@@ -1,22 +1,22 @@
-import { cn } from "@/lib/utils";
-import { ClassValue } from "clsx";
-import { ReactNode } from "react";
-import { motion } from "framer-motion";
+import { cn } from '@/lib/utils';
+import { ClassValue } from 'clsx';
+import { ReactNode } from 'react';
+import { motion } from 'framer-motion';
 
 type SectionProps = {
   children: ReactNode;
-  bgColor?: "white" | "slate" | "black";
+  bgColor?: 'white' | 'slate' | 'black';
   className?: ClassValue;
   height?: number;
 };
 
-type H1Props = Omit<SectionProps, "bgColor">;
+type H1Props = Omit<SectionProps, 'bgColor'>;
 
 type TextProps = H1Props;
 
 function Section({
   children,
-  bgColor = "white",
+  bgColor = 'white',
   className,
   height = 80,
 }: SectionProps) {
@@ -25,13 +25,13 @@ function Section({
       className={cn(
         `flex min-h-[${height}dvh] items-center justify-center py-10`,
         {
-          "bg-slate-200": bgColor === "slate",
+          'bg-slate-200': bgColor === 'slate',
         }
       )}
     >
       <div
         className={cn(
-          "flex flex-col justify-center items-center max-w-[90vw] lg:max-w-[80vw]",
+          'flex flex-col justify-center items-center max-w-[90vw] lg:max-w-[80vw]',
           className
         )}
       >
@@ -43,14 +43,28 @@ function Section({
 
 function SectionTitle({ children, className }: H1Props) {
   return (
-    <h1 className={cn("text-4xl font-bold self-start", className)}>
+    <motion.h1
+      initial={{ opacity: 0, bottom: '-20px' }}
+      whileInView={{ opacity: 1, bottom: '0px' }}
+      transition={{ duration: 2, type: 'spring' }}
+      className={cn('text-4xl font-bold self-start relative', className)}
+    >
       {children}
-    </h1>
+    </motion.h1>
   );
 }
 
 function SectionText({ children, className }: TextProps) {
-  return <p className={cn("text-justify", className)}>{children}</p>;
+  return (
+    <motion.p
+      initial={{ opacity: 0, bottom: '-20px' }}
+      whileInView={{ opacity: 1, bottom: '0px' }}
+      transition={{ duration: 2, type: 'spring' }}
+      className={cn('text-justify relative', className)}
+    >
+      {children}
+    </motion.p>
+  );
 }
 
 export { Section, SectionTitle, SectionText };

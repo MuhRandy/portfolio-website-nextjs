@@ -1,6 +1,6 @@
-import { IconBrandTailwind } from "@tabler/icons-react";
-import CardExperience from "./ui/card-experience";
-import { Section, SectionText, SectionTitle } from "./ui/section";
+import { IconBrandTailwind } from '@tabler/icons-react';
+import CardExperience from './ui/card-experience';
+import { Section, SectionText, SectionTitle } from './ui/section';
 import {
   IconBrandCss3,
   IconBrandFirebase,
@@ -9,26 +9,27 @@ import {
   IconBrandNextjs,
   IconBrandReact,
   IconBrandTypescript,
-} from "@tabler/icons-react";
+} from '@tabler/icons-react';
+import { DefaultAnimation } from './ui/animation';
 
 function SkillAndExperience() {
   const skillIconSize = 30;
   const experiences = [
     {
-      jobTitle: "Frontend Internship",
-      company: "PT. Lorem Ipsum",
+      jobTitle: 'Frontend Internship',
+      company: 'PT. Lorem Ipsum',
       jobDescription:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestia's possimus incidunt minima voluptas corporis ipsa aliquam ut fuga illum laborum?",
     },
     {
-      jobTitle: "Backend Internship",
-      company: "PT. Lorem Ipsum 2",
+      jobTitle: 'Backend Internship',
+      company: 'PT. Lorem Ipsum 2',
       jobDescription:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestia's possimus incidunt minima voluptas corporis ipsa aliquam ut fuga illum laborum?",
     },
     {
-      jobTitle: "Fullstack Internship",
-      company: "PT. Lorem Ipsum 3",
+      jobTitle: 'Fullstack Internship',
+      company: 'PT. Lorem Ipsum 3',
       jobDescription:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestia's possimus incidunt minima voluptas corporis ipsa aliquam ut fuga illum laborum?",
     },
@@ -54,7 +55,7 @@ function SkillAndExperience() {
             further expand my capabilities as a web developer.
           </SectionText>
         </div>
-        <div className="w-[100%] md:max-w-[50%] text-xl">
+        <DefaultAnimation className="w-[100%] md:max-w-[50%] text-xl">
           <ul className="md:flex md:flex-col gap-2 grid grid-cols-2 sm:grid-cols-3">
             <li>
               <IconBrandHtml5
@@ -110,7 +111,7 @@ function SkillAndExperience() {
               Next.js
             </li>
           </ul>
-        </div>
+        </DefaultAnimation>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
         {experiences.map(

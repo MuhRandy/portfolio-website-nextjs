@@ -1,5 +1,6 @@
-import { Section, SectionText, SectionTitle } from "./ui/section";
-import { Button } from "./ui/button";
+import { Section, SectionText, SectionTitle } from './ui/section';
+import { Button } from './ui/button';
+import { ButtonAnimation } from './ui/animation';
 
 function About() {
   return (
@@ -13,7 +14,9 @@ function About() {
         technical expertise to innovative projects, I am excited to embark on a
         fulfilling career in the dynamic field of web development.
       </SectionText>
-      <Button variant={"primary"}>Read More -&gt;</Button>
+      <ButtonAnimation>
+        <Button variant={'primary'}>Read More -&gt;</Button>
+      </ButtonAnimation>
     </Section>
   );
 }

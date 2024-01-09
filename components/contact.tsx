@@ -1,6 +1,7 @@
-import { IconBrandGmail, IconBrandWhatsapp } from "@tabler/icons-react";
-import { Card } from "./ui/card";
-import { Section, SectionTitle } from "./ui/section";
+import { IconBrandGmail, IconBrandWhatsapp } from '@tabler/icons-react';
+import { Card } from './ui/card';
+import { Section, SectionTitle } from './ui/section';
+import { DefaultAnimation } from './ui/animation';
 
 function Contact() {
   const contactIconSize = 25;
@@ -10,7 +11,7 @@ function Contact() {
         <SectionTitle className="self-center lg:self-start text-center">
           Contact Me
         </SectionTitle>
-        <div className="flex flex-col items-center md:flex-row gap-2 md:gap-5">
+        <DefaultAnimation className="flex flex-col items-center justify-around w-[70%] md:flex-row gap-2 md:gap-5">
           <p className="flex items-center">
             <IconBrandGmail
               size={contactIconSize}
@@ -25,7 +26,7 @@ function Contact() {
             />
             +6285822283507
           </p>
-        </div>
+        </DefaultAnimation>
       </Card>
     </Section>
   );

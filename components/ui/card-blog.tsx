@@ -1,11 +1,12 @@
-import Image from "next/image";
+import Image from 'next/image';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./card";
+} from './card';
+import { CardAnimation } from './animation';
 
 function CardBlog({
   title,
@@ -19,16 +20,18 @@ function CardBlog({
   date: string;
 }) {
   return (
-    <Card className="overflow-hidden">
-      <Image src={imgSrc} alt={title} width={1300} height={600} />
-      <CardHeader>
-        <CardDescription>{date}</CardDescription>
-        <CardTitle>{title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="line-clamp-3 text-justify">{text}</p>
-      </CardContent>
-    </Card>
+    <CardAnimation>
+      <Card className="overflow-hidden">
+        <Image src={imgSrc} alt={title} width={1300} height={600} />
+        <CardHeader>
+          <CardDescription>{date}</CardDescription>
+          <CardTitle>{title}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="line-clamp-3 text-justify">{text}</p>
+        </CardContent>
+      </Card>
+    </CardAnimation>
   );
 }
 
