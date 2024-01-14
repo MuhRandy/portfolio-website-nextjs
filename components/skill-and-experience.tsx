@@ -1,6 +1,6 @@
-import { IconBrandTailwind } from '@tabler/icons-react';
-import CardExperience from './ui/card-experience';
-import { Section, SectionText, SectionTitle } from './ui/section';
+import { IconBrandTailwind } from "@tabler/icons-react";
+import CardExperience from "./ui/card-experience";
+import { Section, SectionText, SectionTitle } from "./ui/section";
 import {
   IconBrandCss3,
   IconBrandFirebase,
@@ -9,33 +9,33 @@ import {
   IconBrandNextjs,
   IconBrandReact,
   IconBrandTypescript,
-} from '@tabler/icons-react';
-import { DefaultAnimation } from './ui/animation';
+} from "@tabler/icons-react";
+import { DefaultAnimation } from "./ui/animation";
 
 function SkillAndExperience() {
   const skillIconSize = 30;
   const experiences = [
     {
-      jobTitle: 'Frontend Internship',
-      company: 'PT. Lorem Ipsum',
+      jobTitle: "Frontend Internship",
+      company: "PT. Lorem Ipsum",
       jobDescription:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestia's possimus incidunt minima voluptas corporis ipsa aliquam ut fuga illum laborum?",
     },
     {
-      jobTitle: 'Backend Internship',
-      company: 'PT. Lorem Ipsum 2',
+      jobTitle: "Backend Internship",
+      company: "PT. Lorem Ipsum 2",
       jobDescription:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestia's possimus incidunt minima voluptas corporis ipsa aliquam ut fuga illum laborum?",
     },
     {
-      jobTitle: 'Fullstack Internship',
-      company: 'PT. Lorem Ipsum 3',
+      jobTitle: "Fullstack Internship",
+      company: "PT. Lorem Ipsum 3",
       jobDescription:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestia's possimus incidunt minima voluptas corporis ipsa aliquam ut fuga illum laborum?",
     },
   ];
   return (
-    <Section className="gap-7">
+    <Section id="skill-and-experience" className="gap-7">
       <div className="flex flex-col md:flex-row items-start justify-start gap-7">
         <div className="md:max-w-[70%] flex flex-col gap-7">
           <SectionTitle className="flex flex-col">

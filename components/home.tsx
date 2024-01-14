@@ -1,18 +1,18 @@
-import Image from 'next/image';
-import { Button } from './ui/button';
-import { Section, SectionText, SectionTitle } from './ui/section';
-import { motion } from 'framer-motion';
-import { ButtonAnimation, CardAnimation } from './ui/animation';
+import Image from "next/image";
+import { Button } from "./ui/button";
+import { Section, SectionText, SectionTitle } from "./ui/section";
+import { motion } from "framer-motion";
+import { ButtonAnimation, CardAnimation } from "./ui/animation";
 
 function Home() {
   return (
-    <Section className="md:flex-row md:justify-around">
+    <Section id="home" className="md:flex-row md:justify-around">
       {/* Home Text */}
       <div className="max-w-full md:max-w-[60%] flex flex-col justify-between gap-5">
         <motion.div
-          initial={{ opacity: 0, bottom: '-20px' }}
-          whileInView={{ opacity: 1, bottom: '0px' }}
-          transition={{ duration: 2, type: 'spring' }}
+          initial={{ opacity: 0, bottom: "-20px" }}
+          whileInView={{ opacity: 1, bottom: "0px" }}
+          transition={{ duration: 2, type: "spring" }}
           className="relative"
         >
           <SectionTitle>Hello, I&apos;m Muhammad Randy.</SectionTitle>
@@ -25,7 +25,7 @@ function Home() {
         </SectionText>
         <CardAnimation className="self-center">
           <Image
-            src={'/profil.jpg'}
+            src={"/profil.jpg"}
             alt="Muhammad Randy's Profil Picture"
             width={1051}
             height={1500}
@@ -33,14 +33,14 @@ function Home() {
           />
         </CardAnimation>
         <ButtonAnimation className="flex gap-2 self-center md:self-auto">
-          <Button variant={'primary'}>Download CV</Button>
-          <Button variant={'outlineSecondary'}>Contact Me</Button>
+          <Button variant={"primary"}>Download CV</Button>
+          <Button variant={"outlineSecondary"}>Contact Me</Button>
         </ButtonAnimation>
       </div>
       {/* --- */}
       <CardAnimation>
         <Image
-          src={'/profil.jpg'}
+          src={"/profil.jpg"}
           alt="Muhammad Randy's Profil Picture"
           width={1051}
           height={1500}

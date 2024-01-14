@@ -1,10 +1,14 @@
-import { Section, SectionText, SectionTitle } from './ui/section';
-import { Button } from './ui/button';
-import { ButtonAnimation } from './ui/animation';
+import { Section, SectionText, SectionTitle } from "./ui/section";
+import { Button } from "./ui/button";
+import { ButtonAnimation } from "./ui/animation";
 
 function About() {
   return (
-    <Section bgColor="slate" className="gap-5 sm:max-w-[60vw] lg:max-w-[60vw]">
+    <Section
+      id="about"
+      bgColor="slate"
+      className="gap-5 sm:max-w-[60vw] lg:max-w-[60vw]"
+    >
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
         As a recent 2022 Mathematics graduate from Lambung Mangkurat University,
@@ -15,7 +19,7 @@ function About() {
         fulfilling career in the dynamic field of web development.
       </SectionText>
       <ButtonAnimation>
-        <Button variant={'primary'}>Read More -&gt;</Button>
+        <Button variant={"primary"}>Read More -&gt;</Button>
       </ButtonAnimation>
     </Section>
   );

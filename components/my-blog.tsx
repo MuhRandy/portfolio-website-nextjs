@@ -35,7 +35,7 @@ function MyBlog() {
     },
   ];
   return (
-    <Section className="gap-7">
+    <Section id="my-blog" className="gap-7">
       <SectionTitle className="self-center">My Blog</SectionTitle>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
         {posts.map(

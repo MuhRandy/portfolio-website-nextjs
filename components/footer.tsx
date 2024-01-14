@@ -12,6 +12,7 @@ function Footer() {
   return (
     <footer>
       <Section
+        id="footer"
         bgColor="slate"
         className="gap-2 text-base sm:text-xl text-center"
       >
