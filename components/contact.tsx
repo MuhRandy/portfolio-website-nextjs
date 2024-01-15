@@ -2,6 +2,7 @@ import { IconBrandGmail, IconBrandWhatsapp } from "@tabler/icons-react";
 import { Card } from "./ui/card";
 import { Section, SectionTitle } from "./ui/section";
 import { DefaultAnimation } from "./ui/animation";
+import Link from "next/link";
 
 function Contact() {
   const contactIconSize = 25;
@@ -12,20 +13,26 @@ function Contact() {
           Contact Me
         </SectionTitle>
         <DefaultAnimation className="flex flex-col items-center justify-around w-[70%] md:flex-row gap-2 md:gap-5">
-          <p className="flex items-center">
+          <Link
+            href="mailto:muhammadrandy0027@gmail.com"
+            className="flex items-center"
+          >
             <IconBrandGmail
               size={contactIconSize}
               className="text-red-500 inline"
             />
             muhammadrandy0027@gmail.com
-          </p>
-          <p className="flex items-center">
+          </Link>
+          <Link
+            href="https://wa.me/+6285822283507"
+            className="flex items-center"
+          >
             <IconBrandWhatsapp
               size={contactIconSize}
               className="text-green-600 inline"
             />
             +6285822283507
-          </p>
+          </Link>
         </DefaultAnimation>
       </Card>
     </Section>

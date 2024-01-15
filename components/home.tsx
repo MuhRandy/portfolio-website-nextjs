@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Section, SectionText, SectionTitle } from "./ui/section";
 import { motion } from "framer-motion";
 import { ButtonAnimation, CardAnimation } from "./ui/animation";
+import { Link } from "react-scroll";
 
 function Home() {
   return (
@@ -34,7 +35,9 @@ function Home() {
         </CardAnimation>
         <ButtonAnimation className="flex gap-2 self-center md:self-auto">
           <Button variant={"primary"}>Download CV</Button>
-          <Button variant={"outlineSecondary"}>Contact Me</Button>
+          <Link to="contact" spy={true} smooth={true} duration={500}>
+            <Button variant={"outlineSecondary"}>Contact Me</Button>
+          </Link>
         </ButtonAnimation>
       </div>
       {/* --- */}
