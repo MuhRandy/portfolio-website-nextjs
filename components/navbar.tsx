@@ -1,4 +1,4 @@
-import { IconMenu2 } from "@tabler/icons-react";
+import { IconMenu2, IconCrossFilled } from "@tabler/icons-react";
 import { Link } from "react-scroll";
 import {
   Drawer,
@@ -11,6 +11,7 @@ import {
 import { Separator } from "./ui/separator";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { IconX } from "@tabler/icons-react";
 
 function Navbar() {
   const navs = [
@@ -78,16 +79,21 @@ function Navbar() {
         })}
       </ul>
       <IconMenu2 className="md:hidden" onClick={menuHandler} />
+      {/* Menu on Tablet or Smartphone */}
       <div
         onClick={closeMenuHandler}
         className={cn(
           "bg-black/50 z-10 fixed top-0 right-0 left-0 h-screen flex justify-end",
           {
-            hidden: isOpen,
+            hidden: !isOpen,
           }
         )}
       >
-        <ul className="bg-white w-fit flex flex-col items-center p-3">
+        <ul className="bg-white w-fit flex flex-col items-center p-3 relative">
+          <IconX
+            className="absolute top-1 right-1 cursor-pointer"
+            onClick={closeMenuHandler}
+          />
           <li className="text-3xl mb-3">Menu</li>
           {navs.map((nav: { link: string; name: string; offset: number }) => {
             return (
@@ -97,12 +103,13 @@ function Navbar() {
                 </li>
                 <li key={nav.link}>
                   <Link
+                    onClick={closeMenuHandler}
                     activeClass="font-bold"
                     className="cursor-pointer"
                     to={nav.link}
                     spy={true}
                     smooth={true}
-                    duration={500}
+                    duration={1000}
                     offset={nav.offset}
                   >
                     {nav.name}
