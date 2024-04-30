@@ -7,7 +7,7 @@ import Link from "next/link";
 function Contact() {
   const contactIconSize = 25;
   return (
-    <Section id="contact" height={0} className="relative top-24">
+    <Section id="contact" height={0} className="relative top-24 z-30">
       <Card className="flex flex-col lg:flex-row items-center text-white bg-black gap-3 lg:gap-10 px-6 py-10 sm:text-xl w-screen sm:w-[80vw]">
         <SectionTitle className="self-center lg:self-start text-center">
           Contact Me

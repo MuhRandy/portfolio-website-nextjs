@@ -1,11 +1,11 @@
-import { CardAnimation } from './animation';
+import { CardAnimation } from "./animation";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from './card';
+} from "./card";
 
 function CardExperience({
   jobTitle,

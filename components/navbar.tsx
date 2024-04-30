@@ -1,14 +1,5 @@
 import { IconMenu2, IconCrossFilled } from "@tabler/icons-react";
 import { Link } from "react-scroll";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerDescription,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "./ui/drawer";
-import { Separator } from "./ui/separator";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { IconX } from "@tabler/icons-react";
@@ -58,7 +49,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-end px-10 py-4 bg-white/50 backdrop-blur-sm sticky top-0 left-0 right-0 z-10 text-lg lg:text-2xl">
+    <nav className="flex items-center justify-end px-10 py-4 bg-white/50 backdrop-blur-sm sticky top-0 left-0 right-0 z-20 text-lg lg:text-2xl">
       <ul className="md:flex items-center gap-4 hidden">
         {navs.map((nav: { link: string; name: string; offset: number }) => {
           return (
@@ -78,22 +69,37 @@ function Navbar() {
           );
         })}
       </ul>
+
       <IconMenu2 className="md:hidden" onClick={menuHandler} />
+
       {/* Menu on Tablet or Smartphone */}
       <div
         onClick={closeMenuHandler}
         className={cn(
-          "bg-black/50 z-10 fixed top-0 right-0 left-0 h-screen flex justify-end",
+          "bg-black/50 h-screen invisible",
+          "fixed top-0 right-0 left-0 bottom-0",
+          "flex justify-end",
           {
-            hidden: !isOpen,
+            visible: isOpen,
           }
         )}
       >
-        <ul className="bg-white w-fit flex flex-col items-center p-3 relative">
+        <ul
+          className={cn(
+            "items-center relative left-20",
+            "flex flex-col",
+            "bg-white w-fit p-3",
+            "transition-all duration-[600ms] ease-in-out",
+            {
+              "left-0": isOpen,
+            }
+          )}
+        >
           <IconX
             className="absolute top-1 right-1 cursor-pointer"
             onClick={closeMenuHandler}
           />
+
           <li className="text-3xl mb-3">Menu</li>
           {navs.map((nav: { link: string; name: string; offset: number }) => {
             return (
@@ -101,6 +107,7 @@ function Navbar() {
                 <li>
                   <hr className="border-black w-[200px] my-2" />
                 </li>
+
                 <li key={nav.link}>
                   <Link
                     onClick={closeMenuHandler}
@@ -118,40 +125,12 @@ function Navbar() {
               </>
             );
           })}
+
           <li>
             <hr className="border-black w-[200px] my-2" />
           </li>
         </ul>
       </div>
-      {/* <Drawer>
-        <DrawerTrigger>
-          <IconMenu2 className="md:hidden" />
-        </DrawerTrigger>
-        <DrawerContent className="top-0 right-0 mt-0 ml-[35vw]">
-          <DrawerHeader>
-            <DrawerTitle>Menu</DrawerTitle>
-          </DrawerHeader>
-          <ul>
-            {navs.map((nav: { link: string; name: string; offset: number }) => {
-              return (
-                <li key={nav.link}>
-                  <Link
-                    activeClass="font-bold"
-                    className="cursor-pointer"
-                    to={nav.link}
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    offset={nav.offset}
-                  >
-                    {nav.name}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </DrawerContent>
-      </Drawer> */}
     </nav>
   );
 }

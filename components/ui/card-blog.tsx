@@ -1,12 +1,12 @@
-import Image from 'next/image';
+import Image from "next/image";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from './card';
-import { CardAnimation } from './animation';
+} from "./card";
+import { CardAnimation } from "./animation";
 
 function CardBlog({
   title,

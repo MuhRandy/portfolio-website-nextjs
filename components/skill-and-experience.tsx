@@ -55,7 +55,7 @@ function SkillAndExperience() {
             further expand my capabilities as a web developer.
           </SectionText>
         </div>
-        <DefaultAnimation className="w-[100%] md:max-w-[50%] text-xl">
+        <DefaultAnimation className="w-full md:max-w-[50%] text-xl">
           <ul className="md:flex md:flex-col gap-2 grid grid-cols-2 sm:grid-cols-3">
             <li>
               <IconBrandHtml5

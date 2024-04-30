@@ -11,15 +11,19 @@ import SkillAndExperience from "@/components/skill-and-experience";
 
 export default function Page() {
   return (
-    <main>
-      <Navbar />
-      <Home />
-      <About />
-      <SkillAndExperience />
-      <MyWorks />
-      <MyBlog />
-      <Contact />
+    <>
+      <header className="overflow-clip">
+        <Navbar />
+      </header>
+      <main className="overflow-x-clip">
+        <Home />
+        <About />
+        <SkillAndExperience />
+        <MyWorks />
+        <MyBlog />
+        <Contact />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
