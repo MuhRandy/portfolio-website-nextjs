@@ -1,21 +1,13 @@
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { Link } from "react-scroll";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
-import { NavData } from "@/lib/type";
-import { useGlobalContext } from "@/lib/context";
+import { useState } from "react";
+import data from "@/public/data.json";
+import { NavData, NavsData } from "@/lib/type";
 
 function Navbar() {
-  const { data } = useGlobalContext();
-
-  const [navs, setNavs] = useState<NavData>([]);
+  const { navs }: { navs: NavsData } = data;
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (data.length > 0) {
-      setNavs(data[0].navs);
-    }
-  }, [data]);
 
   const menuHandler = () => {
     setIsOpen(true);
@@ -33,7 +25,7 @@ function Navbar() {
       )}
     >
       <ul className="md:flex items-center gap-4 hidden">
-        {navs?.map((nav: { link: string; name: string; offset: number }) => {
+        {navs.map((nav: NavData) => {
           return (
             <li key={nav.link}>
               <Link
@@ -83,7 +75,7 @@ function Navbar() {
           />
 
           <li className="text-3xl mb-3">Menu</li>
-          {navs?.map((nav: { link: string; name: string; offset: number }) => {
+          {navs.map((nav: NavData) => {
             return (
               <li key={nav.link} className="text-center">
                 <hr className="border-black w-[200px] my-2" />

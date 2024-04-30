@@ -12,31 +12,16 @@ import {
   IconBrandTailwind,
   IconBrandTypescript,
 } from "@tabler/icons-react";
+import { ProjectData } from "@/lib/type";
 
 function CardProject({
-  name,
+  projectName,
   imgSrc,
   siteLink,
   githubLink,
   desc,
   buildWith,
-}: {
-  name: string;
-  imgSrc: string;
-  siteLink: string;
-  githubLink: string;
-  desc: string;
-  buildWith: (
-    | "html"
-    | "css"
-    | "javascript"
-    | "typescript"
-    | "tailwindcss"
-    | "reactjs"
-    | "firebase"
-    | "nextjs"
-  )[];
-}) {
+}: ProjectData) {
   const generateBuildWithElement = (
     buildWith: string,
     key: string | number
@@ -114,9 +99,9 @@ function CardProject({
   return (
     <CardAnimation>
       <Card className="overflow-hidden relative group">
-        <Image src={imgSrc} alt={name} width={1300} height={600} />
+        <Image src={imgSrc} alt={projectName} width={1300} height={600} />
         <div className="w-full h-full flex flex-col justify-center items-center gap-2 pb-4 px-4">
-          <CardTitle className="text-center text-lg">{name}</CardTitle>
+          <CardTitle className="text-center text-lg">{projectName}</CardTitle>
           <p className="text-center">{desc}</p>
           <div className="text-center">
             <p>Build with:</p>

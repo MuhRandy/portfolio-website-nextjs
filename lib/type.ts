@@ -1,45 +1,10 @@
-type BuildWith = (
-  | "html"
-  | "css"
-  | "javascript"
-  | "typescript"
-  | "tailwindcss"
-  | "reactjs"
-  | "firebase"
-  | "nextjs"
-)[];
-
-type ProjectData = {
-  projectName: string;
-  imgSrc: string;
-  siteLink: string;
-  githubLink: string;
-  desc: string;
-  buildWith: BuildWith;
-};
-
-type Data =
-  | {
-      navs: NavsData;
-      posts: PostsData;
-      projects: ProjectsData;
-      experiences: ExperiencesData;
-    }[]
-  | [];
-
-type NavData =
-  | {
-      link: string;
-      name: string;
-      offset: number;
-    }[]
-  | [];
-
-type NavsData = {
+type NavData = {
   link: string;
   name: string;
   offset: number;
-}[];
+};
+
+type NavsData = NavData[];
 
 type PostData = {
   title: string;
@@ -48,14 +13,16 @@ type PostData = {
   url: string;
 };
 
-type PostsData =
-  | {
-      title: string;
-      date: string;
-      text: string;
-      url: string;
-    }[]
-  | [];
+type PostsData = PostData[];
+
+type ProjectData = {
+  projectName: string;
+  imgSrc: string;
+  siteLink: string;
+  githubLink: string;
+  desc: string;
+  buildWith: string[];
+};
 
 type ProjectsData = ProjectData[];
 
@@ -65,19 +32,12 @@ type ExperiencesData = {
   jobDescription: string;
 }[];
 
-type GlobalContext = {
-  data: Data;
-};
-
 export type {
-  BuildWith,
   ProjectData,
-  Data,
   NavData,
   NavsData,
   PostData,
   PostsData,
   ProjectsData,
   ExperiencesData,
-  GlobalContext,
 };

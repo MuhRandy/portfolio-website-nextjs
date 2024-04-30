@@ -1,19 +1,10 @@
 import { Section, SectionTitle } from "./ui/section";
 import CardBlog from "./ui/card-blog";
-import { useGlobalContext } from "@/lib/context";
 import { PostData, PostsData } from "@/lib/type";
-import { useEffect, useState } from "react";
+import data from "@/public/data.json";
 
 function MyBlog() {
-  const { data } = useGlobalContext();
-
-  const [posts, setPosts] = useState<PostsData>([]);
-
-  useEffect(() => {
-    if (data.length > 0) {
-      setPosts(data[0].posts);
-    }
-  }, [data]);
+  const { posts }: { posts: PostsData } = data;
 
   return (
     <Section id="my-blog" className="gap-7">
