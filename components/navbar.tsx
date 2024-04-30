@@ -1,44 +1,21 @@
-import { IconMenu2 } from "@tabler/icons-react";
+import { IconMenu2, IconX } from "@tabler/icons-react";
 import { Link } from "react-scroll";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
-import { IconX } from "@tabler/icons-react";
+import { useEffect, useState } from "react";
+import { NavData } from "@/lib/type";
+import { useGlobalContext } from "@/lib/context";
 
 function Navbar() {
-  const navs = [
-    {
-      link: "home",
-      name: "Home",
-      offset: -70,
-    },
-    {
-      link: "about",
-      name: "About",
-      offset: -130,
-    },
-    {
-      link: "skill-and-experience",
-      name: "Skill and Experience",
-      offset: -70,
-    },
-    {
-      link: "my-work",
-      name: "My Work",
-      offset: -70,
-    },
-    {
-      link: "my-blog",
-      name: "My Blog",
-      offset: -70,
-    },
-    {
-      link: "contact",
-      name: "Contact",
-      offset: -250,
-    },
-  ];
+  const { data } = useGlobalContext();
 
+  const [navs, setNavs] = useState<NavData>([]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (data.length > 0) {
+      setNavs(data[0].navs);
+    }
+  }, [data]);
 
   const menuHandler = () => {
     setIsOpen(true);
@@ -56,7 +33,7 @@ function Navbar() {
       )}
     >
       <ul className="md:flex items-center gap-4 hidden">
-        {navs.map((nav: { link: string; name: string; offset: number }) => {
+        {navs?.map((nav: { link: string; name: string; offset: number }) => {
           return (
             <li key={nav.link}>
               <Link
@@ -106,28 +83,23 @@ function Navbar() {
           />
 
           <li className="text-3xl mb-3">Menu</li>
-          {navs.map((nav: { link: string; name: string; offset: number }) => {
+          {navs?.map((nav: { link: string; name: string; offset: number }) => {
             return (
-              <>
-                <li>
-                  <hr className="border-black w-[200px] my-2" />
-                </li>
-
-                <li key={nav.link}>
-                  <Link
-                    onClick={closeMenuHandler}
-                    activeClass="font-bold"
-                    className="cursor-pointer"
-                    to={nav.link}
-                    spy={true}
-                    smooth={true}
-                    duration={1000}
-                    offset={nav.offset}
-                  >
-                    {nav.name}
-                  </Link>
-                </li>
-              </>
+              <li key={nav.link} className="text-center">
+                <hr className="border-black w-[200px] my-2" />
+                <Link
+                  onClick={closeMenuHandler}
+                  activeClass="font-bold"
+                  className="cursor-pointer"
+                  to={nav.link}
+                  spy={true}
+                  smooth={true}
+                  duration={1000}
+                  offset={nav.offset}
+                >
+                  {nav.name}
+                </Link>
+              </li>
             );
           })}
 
