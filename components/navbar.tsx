@@ -1,4 +1,4 @@
-import { IconMenu2, IconCrossFilled } from "@tabler/icons-react";
+import { IconMenu2 } from "@tabler/icons-react";
 import { Link } from "react-scroll";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
@@ -49,7 +49,12 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-end px-10 py-4 bg-white/50 backdrop-blur-sm sticky top-0 left-0 right-0 z-20 text-lg lg:text-2xl">
+    <nav
+      className={cn(
+        "flex items-center justify-end",
+        "px-10 py-4 bg-white/50 backdrop-blur-sm overflow-x-clip"
+      )}
+    >
       <ul className="md:flex items-center gap-4 hidden">
         {navs.map((nav: { link: string; name: string; offset: number }) => {
           return (

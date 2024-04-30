@@ -8,11 +8,17 @@ import MyBlog from "@/components/my-blog";
 import MyWorks from "@/components/my-works";
 import Navbar from "@/components/navbar";
 import SkillAndExperience from "@/components/skill-and-experience";
+import { cn } from "@/lib/utils";
 
 export default function Page() {
   return (
     <>
-      <header className="overflow-clip">
+      <header
+        className={cn(
+          "sticky top-0 left-0 right-0 z-20",
+          "text-lg lg:text-2xl"
+        )}
+      >
         <Navbar />
       </header>
       <main className="overflow-x-clip">
