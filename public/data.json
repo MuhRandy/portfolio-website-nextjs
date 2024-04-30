@@ -1,0 +1,109 @@
+{
+  "navs": [
+    {
+      "link": "home",
+      "name": "Home",
+      "offset": -70
+    },
+    {
+      "link": "about",
+      "name": "About",
+      "offset": -130
+    },
+    {
+      "link": "skill-and-experience",
+      "name": "Skill and Experience",
+      "offset": -70
+    },
+    {
+      "link": "my-work",
+      "name": "My Work",
+      "offset": -70
+    },
+    {
+      "link": "my-blog",
+      "name": "My Blog",
+      "offset": -70
+    },
+    {
+      "link": "contact",
+      "name": "Contact",
+      "offset": -250
+    }
+  ],
+  "posts": [
+    {
+      "title": "Lorem, ipsum dolor",
+      "date": "20 Januari, 2024",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores neque explicabo optio unde esse similique, reiciendis assumenda impedit dolorem nisi repellat? Accusantium officiis, facilis soluta alias molestias consequuntur eveniet, dolorum quos doloribus culpa dignissimos temporibus mollitia aliquam eligendi? Facere, veritatis?",
+      "imgSrc": "/projects/school-website.jpg"
+    },
+    {
+      "title": "Lorem, ipsum dolor",
+      "date": "20 Januari, 2024",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores neque explicabo optio unde esse similique, reiciendis assumenda impedit dolorem nisi repellat? Accusantium officiis, facilis soluta alias molestias consequuntur eveniet, dolorum quos doloribus culpa dignissimos temporibus mollitia aliquam eligendi? Facere, veritatis?",
+      "imgSrc": "/projects/school-website.jpg"
+    },
+    {
+      "title": "Lorem, ipsum dolor",
+      "date": "20 Januari, 2024",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores neque explicabo optio unde esse similique, reiciendis assumenda impedit dolorem nisi repellat? Accusantium officiis, facilis soluta alias molestias consequuntur eveniet, dolorum quos doloribus culpa dignissimos temporibus mollitia aliquam eligendi? Facere, veritatis?",
+      "imgSrc": "/projects/school-website.jpg"
+    },
+    {
+      "title": "Lorem, ipsum dolor",
+      "date": "20 Januari, 2024",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores neque explicabo optio unde esse similique, reiciendis assumenda impedit dolorem nisi repellat? Accusantium officiis, facilis soluta alias molestias consequuntur eveniet, dolorum quos doloribus culpa dignissimos temporibus mollitia aliquam eligendi? Facere, veritatis?",
+      "imgSrc": "/projects/school-website.jpg"
+    },
+    {
+      "title": "Lorem, ipsum dolor",
+      "date": "20 Januari, 2024",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores neque explicabo optio unde esse similique, reiciendis assumenda impedit dolorem nisi repellat? Accusantium officiis, facilis soluta alias molestias consequuntur eveniet, dolorum quos doloribus culpa dignissimos temporibus mollitia aliquam eligendi? Facere, veritatis?",
+      "imgSrc": "/projects/school-website.jpg"
+    }
+  ],
+  "projects": [
+    {
+      "projectName": "MTs Miftahul Ulum Website",
+      "imgSrc": "/projects/school-website.jpg",
+      "siteLink": "https://mts-miftahul-ulum.web.app/",
+      "githubLink": "https://github.com/MuhRandy/mts-school-web"
+    },
+    {
+      "projectName": "Quiz Qur'an",
+      "imgSrc": "/projects/quiz-sambung-ayat.jpg",
+      "siteLink": "https://muhrandy.github.io/quiz-hafalan-quran/",
+      "githubLink": "https://github.com/MuhRandy/quiz-hafalan-quran"
+    },
+    {
+      "projectName": "Markdown Preview",
+      "imgSrc": "/projects/react-markdown-preview.jpg",
+      "siteLink": "https://muhrandy.github.io/react-markdown-preview-fcc/",
+      "githubLink": "https://github.com/MuhRandy/react-markdown-preview-fcc"
+    },
+    {
+      "projectName": "Random Quote Machine",
+      "imgSrc": "/projects/random-quote-machine.jpg",
+      "siteLink": "https://muhrandy.github.io/random-quote-machine/",
+      "githubLink": "https://github.com/MuhRandy/random-quote-machine"
+    }
+  ],
+  "experiences": [
+    {
+      "jobTitle": "Frontend Internship",
+      "company": "PT. Lorem Ipsum",
+      "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestia's possimus incidunt minima voluptas corporis ipsa aliquam ut fuga illum laborum?"
+    },
+    {
+      "jobTitle": "Backend Internship",
+      "company": "PT. Lorem Ipsum 2",
+      "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestia's possimus incidunt minima voluptas corporis ipsa aliquam ut fuga illum laborum?"
+    },
+    {
+      "jobTitle": "Fullstack Internship",
+      "company": "PT. Lorem Ipsum 3",
+      "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestia's possimus incidunt minima voluptas corporis ipsa aliquam ut fuga illum laborum?"
+    }
+  ]
+}

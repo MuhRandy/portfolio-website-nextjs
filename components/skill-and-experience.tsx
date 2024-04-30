@@ -46,13 +46,13 @@ function SkillAndExperience() {
             Having pursued a self-directed learning path in web development
             since graduating with my bachelor&apos;s degree, I&apos;ve actively
             engaged with online resources such as YouTube and platforms like
-            FreeCodeCamp. Through dedication and practical application,
-            I&apos;ve successfully developed several personal projects that
-            showcase my skills and passion for web development. These projects
-            not only reflect my technical abilities but also demonstrate my
-            commitment to continuous learning and innovation. I am excited to
-            contribute my knowledge and expertise to real-world projects and
-            further expand my capabilities as a web developer.
+            Freecodecamp and Dicoding. Through dedication and practical
+            application, I&apos;ve successfully developed several personal
+            projects that showcase my skills and passion for web development.
+            These projects not only reflect my technical abilities but also
+            demonstrate my commitment to continuous learning and innovation. I
+            am excited to contribute my knowledge and expertise to real-world
+            projects and further expand my capabilities as a web developer.
           </SectionText>
         </div>
         <DefaultAnimation className="w-full md:max-w-[50%] text-xl">
@@ -106,14 +106,10 @@ function SkillAndExperience() {
               />
               Firebase
             </li>
-            <li>
-              <IconBrandNextjs size={skillIconSize} className="inline" />
-              Next.js
-            </li>
           </ul>
         </DefaultAnimation>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
         {experiences.map(
           (
             experience: {
@@ -133,7 +129,7 @@ function SkillAndExperience() {
             );
           }
         )}
-      </div>
+      </div> */}
     </Section>
   );
 }

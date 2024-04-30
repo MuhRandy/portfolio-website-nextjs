@@ -4,34 +4,23 @@ import CardBlog from "./ui/card-blog";
 function MyBlog() {
   const posts = [
     {
-      title: "Lorem, ipsum dolor",
-      date: "20 Januari, 2024",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores neque explicabo optio unde esse similique, reiciendis assumenda impedit dolorem nisi repellat? Accusantium officiis, facilis soluta alias molestias consequuntur eveniet, dolorum quos doloribus culpa dignissimos temporibus mollitia aliquam eligendi? Facere, veritatis?",
-      imgSrc: "/projects/school-website.jpg",
+      title: "Membuat Tooltip dengan HTML & CSS",
+      date: "Apr 20, 2024",
+      text: "Sebelum kita membuat tooltip, sebaiknya kita mengetahui apa sih itu tooltip dan bagaimana contohnya. Melansir dari W3School, tooltip adalah...",
+      url: 'https://medium.com/@muhammadrandy0027/membuat-tooltip-dengan-html-css-f758971c94f1?source=user_profile---------0----------------------------'
     },
     {
-      title: "Lorem, ipsum dolor",
-      date: "20 Januari, 2024",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores neque explicabo optio unde esse similique, reiciendis assumenda impedit dolorem nisi repellat? Accusantium officiis, facilis soluta alias molestias consequuntur eveniet, dolorum quos doloribus culpa dignissimos temporibus mollitia aliquam eligendi? Facere, veritatis?",
-      imgSrc: "/projects/school-website.jpg",
+      title: "Membuat Web Resep Sederhana dengan Frontend Mentor",
+      date: "Apr 6, 2024",
+      text: "Akhir-akhir ini saya sedang seru-serunya belajar membuat web atau situs sederhana. Namun belajar dengan membaca konsep-konsep saja sering...",
+      url: 'https://medium.com/@muhammadrandy0027/belajar-membuat-web-resep-sederhana-dengan-frontend-mentor-c73a54afcd74?source=user_profile---------1----------------------------'
     },
     {
-      title: "Lorem, ipsum dolor",
-      date: "20 Januari, 2024",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores neque explicabo optio unde esse similique, reiciendis assumenda impedit dolorem nisi repellat? Accusantium officiis, facilis soluta alias molestias consequuntur eveniet, dolorum quos doloribus culpa dignissimos temporibus mollitia aliquam eligendi? Facere, veritatis?",
-      imgSrc: "/projects/school-website.jpg",
-    },
-    {
-      title: "Lorem, ipsum dolor",
-      date: "20 Januari, 2024",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores neque explicabo optio unde esse similique, reiciendis assumenda impedit dolorem nisi repellat? Accusantium officiis, facilis soluta alias molestias consequuntur eveniet, dolorum quos doloribus culpa dignissimos temporibus mollitia aliquam eligendi? Facere, veritatis?",
-      imgSrc: "/projects/school-website.jpg",
-    },
-    {
-      title: "Lorem, ipsum dolor",
-      date: "20 Januari, 2024",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores neque explicabo optio unde esse similique, reiciendis assumenda impedit dolorem nisi repellat? Accusantium officiis, facilis soluta alias molestias consequuntur eveniet, dolorum quos doloribus culpa dignissimos temporibus mollitia aliquam eligendi? Facere, veritatis?",
-      imgSrc: "/projects/school-website.jpg",
+      title:
+        "Analisis Data Genre Netflix Original Shows yang Paling Banyak Dibatalkan (2014–2023)",
+      date: "Sep 20, 2023",
+      text: "Data diambil dari Kaggle dimana dataset ini berisi tentang Original Shows Netflix yang berakhir dari tahun 2014 hingga 2023. Untuk tahapan…",
+      url: 'https://medium.com/@muhammadrandy0027/genre-netflix-original-shows-yang-paling-banyak-dibatalkan-2014-2023-8f9dfbd50fc?source=user_profile---------2----------------------------'
     },
   ];
   return (
@@ -44,7 +33,7 @@ function MyBlog() {
               title: string;
               date: string;
               text: string;
-              imgSrc: string;
+              url: string;
             },
             index: number
           ) => {
@@ -54,7 +43,7 @@ function MyBlog() {
                 title={post.title}
                 text={post.text}
                 date={post.date}
-                imgSrc={post.imgSrc}
+                url={post.url}
               />
             );
           }
