@@ -1,4 +1,3 @@
-import { CardAnimation } from "./animation";
 import {
   Card,
   CardContent,
@@ -17,15 +16,13 @@ function CardExperience({
   jobDescription: string;
 }) {
   return (
-    <CardAnimation>
-      <Card className="sm:max-w-[350px]">
-        <CardHeader>
-          <CardTitle>{jobTitle}</CardTitle>
-          <CardDescription>{company}</CardDescription>
-        </CardHeader>
-        <CardContent className="text-justify">{jobDescription}</CardContent>
-      </Card>
-    </CardAnimation>
+    <Card className="sm:max-w-[350px]">
+      <CardHeader>
+        <CardTitle>{jobTitle}</CardTitle>
+        <CardDescription>{company}</CardDescription>
+      </CardHeader>
+      <CardContent className="text-justify">{jobDescription}</CardContent>
+    </Card>
   );
 }
 
