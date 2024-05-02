@@ -12,6 +12,7 @@ import {
   IconBrandTypescript,
 } from "@tabler/icons-react";
 import { ProjectData } from "@/lib/type";
+import { cn } from "@/lib/utils";
 
 function CardProject({
   projectName,
@@ -98,11 +99,20 @@ function CardProject({
   return (
     <Card className="overflow-hidden relative group">
       <Image src={imgSrc} alt={projectName} width={1300} height={600} />
-      <div className="w-full h-full flex flex-col justify-center items-center gap-2 pb-4 px-4">
+
+      <div
+        className={cn(
+          "w-full h-full pb-4 px-4",
+          "flex flex-col justify-center items-center gap-2"
+        )}
+      >
         <CardTitle className="text-center text-lg">{projectName}</CardTitle>
+
         <p className="text-center">{desc}</p>
+
         <div className="text-center">
           <p>Build with:</p>
+
           <ul className="flex flex-wrap justify-center gap-x-4">
             {buildWith?.map((item) => generateBuildWithElement(item, item))}
           </ul>
@@ -112,6 +122,7 @@ function CardProject({
           <a href={siteLink} className="underline">
             Live Site
           </a>
+
           <a href={githubLink} className="flex items-center underline">
             <IconBrandGithubFilled size={15} /> Github
           </a>

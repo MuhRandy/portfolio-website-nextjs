@@ -20,6 +20,7 @@ function MyWorks() {
           My Works
         </motion.span>
       </SectionTitle>
+
       <div className="flex flex-col gap-4 sm:px-10">
         {projects.map((project: ProjectData, index: number) => {
           return (

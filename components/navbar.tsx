@@ -60,10 +60,10 @@ function Navbar() {
       >
         <ul
           className={cn(
-            "items-center relative left-20",
-            "flex flex-col",
+            "relative left-20",
+            "flex flex-col items-center",
             "bg-white w-fit p-3",
-            "transition-all duration-[600ms] ease-in-out",
+            "transition-all duration-700 ease-in-out",
             {
               "left-0": isOpen,
             }

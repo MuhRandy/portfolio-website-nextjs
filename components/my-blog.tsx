@@ -20,6 +20,7 @@ function MyBlog() {
           My Blog
         </motion.span>
       </SectionTitle>
+
       <motion.div
         variants={fromRight}
         initial="hidden"

@@ -2,7 +2,7 @@ import { Section, SectionText, SectionTitle } from "./ui/section";
 import { Button } from "./ui/button";
 import { IconArrowRight } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { defaultAnimation, fromLeft } from "@/lib/animationVariants";
+import { defaultAnimation } from "@/lib/animationVariants";
 
 function About() {
   return (
@@ -17,6 +17,7 @@ function About() {
           About Me
         </motion.span>
       </SectionTitle>
+
       <SectionText>
         <motion.span
           variants={defaultAnimation}
@@ -32,6 +33,7 @@ function About() {
           on a fulfilling career in the dynamic field of web development.
         </motion.span>
       </SectionText>
+
       <motion.div
         variants={defaultAnimation}
         initial="fromLeft"

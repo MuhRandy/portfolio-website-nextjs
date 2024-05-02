@@ -21,23 +21,30 @@ function Footer() {
           <Link href="https://www.linkedin.com/in/muhammad-randy/">
             <IconBrandLinkedin size={35} className="text-blue-500" />
           </Link>
+
           <Link href="#">
             <IconBrandFacebookFilled size={35} className="text-blue-700" />
           </Link>
+
           <Link href="#">
             <IconBrandInstagram size={35} className="text-red-500" />
           </Link>
+
           <Link href="https://twitter.com/RandyThz">
             <IconBrandTwitterFilled size={35} className="text-blue-500" />
           </Link>
+
           <Link href="https://github.com/MuhRandy">
             <IconBrandGithubFilled size={35} />
           </Link>
+
           <Link href="#">
             <IconBrandYoutubeFilled size={35} className="text-red-600" />
           </Link>
         </div>
+
         <p>Copyright © 2024 - Created by Muhammad Randy</p>
+
         <p>Made with ❤ using Next.js</p>
       </Section>
     </footer>

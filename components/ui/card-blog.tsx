@@ -6,17 +6,14 @@ import {
   CardTitle,
 } from "./card";
 
-function CardBlog({
-  title,
-  text,
-  date,
-  url,
-}: {
+type CardBlogProps = {
   title: string;
   text: string;
   date: string;
   url: string;
-}) {
+};
+
+function CardBlog({ title, text, date, url }: CardBlogProps) {
   return (
     <a href={url}>
       <Card className="overflow-hidden">
@@ -24,6 +21,7 @@ function CardBlog({
           <CardTitle>{title}</CardTitle>
           <CardDescription>{date}</CardDescription>
         </CardHeader>
+
         <CardContent>
           <p className="text-justify">{text}</p>
         </CardContent>

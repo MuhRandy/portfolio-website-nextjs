@@ -4,12 +4,19 @@ import { Section, SectionTitle } from "./ui/section";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { defaultAnimation } from "@/lib/animationVariants";
+import { cn } from "@/lib/utils";
 
 function Contact() {
   const contactIconSize = 25;
   return (
-    <Section id="contact" height={0} className="relative top-24 z-30">
-      <Card className="flex flex-col lg:flex-row items-center text-white bg-black gap-3 lg:gap-10 px-6 py-10 sm:text-xl w-screen sm:w-[80vw]">
+    <Section id="contact" height={0} className="relative top-24">
+      <Card
+        className={cn(
+          "flex flex-col lg:flex-row items-center",
+          "text-white sm:text-xl",
+          "bg-black gap-3 lg:gap-10 px-6 py-10 w-screen sm:w-[80vw]"
+        )}
+      >
         <SectionTitle className="self-center lg:self-start text-center">
           Contact Me
         </SectionTitle>

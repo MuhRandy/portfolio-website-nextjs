@@ -28,6 +28,7 @@ function SkillAndExperience() {
               <span>Experience</span>
             </motion.span>
           </SectionTitle>
+
           <SectionText>
             <motion.span
               variants={defaultAnimation}
@@ -49,6 +50,7 @@ function SkillAndExperience() {
             </motion.span>
           </SectionText>
         </div>
+
         <motion.div
           variants={defaultAnimation}
           initial="fromRight"
@@ -63,6 +65,7 @@ function SkillAndExperience() {
               />
               HTML
             </li>
+
             <li>
               <IconBrandCss3
                 size={skillIconSize}
@@ -70,6 +73,7 @@ function SkillAndExperience() {
               />
               CSS
             </li>
+
             <li>
               <IconBrandJavascript
                 size={skillIconSize}
@@ -77,6 +81,7 @@ function SkillAndExperience() {
               />
               Javascript
             </li>
+
             <li>
               <IconBrandTypescript
                 size={skillIconSize}
@@ -84,6 +89,7 @@ function SkillAndExperience() {
               />
               Typescript
             </li>
+
             <li>
               <IconBrandTailwind
                 size={skillIconSize}
@@ -91,6 +97,7 @@ function SkillAndExperience() {
               />
               TailwindCSS
             </li>
+
             <li>
               <IconBrandReact
                 size={skillIconSize}
@@ -98,6 +105,7 @@ function SkillAndExperience() {
               />
               ReactJs
             </li>
+
             <li>
               <IconBrandFirebase
                 size={skillIconSize}
@@ -108,27 +116,6 @@ function SkillAndExperience() {
           </ul>
         </motion.div>
       </div>
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
-        {experiences.map(
-          (
-            experience: {
-              jobTitle: string;
-              company: string;
-              jobDescription: string;
-            },
-            index: number
-          ) => {
-            return (
-              <CardExperience
-                key={index}
-                jobTitle={experience.jobTitle}
-                company={experience.company}
-                jobDescription={experience.jobDescription}
-              />
-            );
-          }
-        )}
-      </div> */}
     </Section>
   );
 }

@@ -4,13 +4,19 @@ import { Section, SectionText, SectionTitle } from "./ui/section";
 import { Link } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { defaultAnimation, fromLeft, fromRight } from "@/lib/animationVariants";
+import { defaultAnimation } from "@/lib/animationVariants";
+import { cn } from "@/lib/utils";
 
 function Home() {
   return (
     <Section id="home" className="md:flex-row md:justify-around">
       {/* Home Text */}
-      <div className="max-w-full md:max-w-[60%] flex flex-col justify-between gap-5">
+      <div
+        className={cn(
+          "max-w-full md:max-w-[60%]",
+          "flex flex-col justify-between gap-5"
+        )}
+      >
         <SectionTitle>
           <TypeAnimation
             sequence={[
@@ -67,6 +73,7 @@ function Home() {
         </div>
       </div>
       {/* --- */}
+
       <motion.div
         whileInView={{ rotate: 5 }}
         initial={{ rotate: 0 }}
