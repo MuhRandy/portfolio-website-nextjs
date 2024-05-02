@@ -1,8 +1,9 @@
 import { IconBrandGmail, IconBrandWhatsapp } from "@tabler/icons-react";
 import { Card } from "./ui/card";
 import { Section, SectionTitle } from "./ui/section";
-import { DefaultAnimation } from "./ui/animation";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { defaultAnimation } from "@/lib/animationVariants";
 
 function Contact() {
   const contactIconSize = 25;
@@ -12,28 +13,44 @@ function Contact() {
         <SectionTitle className="self-center lg:self-start text-center">
           Contact Me
         </SectionTitle>
-        <DefaultAnimation className="flex flex-col items-center justify-around w-[70%] md:flex-row gap-2 md:gap-5">
-          <Link
-            href="mailto:muhammadrandy0027@gmail.com"
-            className="flex items-center"
+
+        <div className="flex flex-col items-center justify-around w-[70%] md:flex-row gap-2 md:gap-5">
+          <motion.span
+            variants={defaultAnimation}
+            initial="fromTop"
+            whileInView="visible"
+            className="inline-block"
           >
-            <IconBrandGmail
-              size={contactIconSize}
-              className="text-red-500 inline"
-            />
-            muhammadrandy0027@gmail.com
-          </Link>
-          <Link
-            href="https://wa.me/+6285822283507"
-            className="flex items-center"
+            <Link
+              href="mailto:muhammadrandy0027@gmail.com"
+              className="flex items-center"
+            >
+              <IconBrandGmail
+                size={contactIconSize}
+                className="text-red-500 inline"
+              />
+              muhammadrandy0027@gmail.com
+            </Link>
+          </motion.span>
+
+          <motion.span
+            variants={defaultAnimation}
+            initial="fromBottom"
+            whileInView="visible"
+            className="inline-block"
           >
-            <IconBrandWhatsapp
-              size={contactIconSize}
-              className="text-green-600 inline"
-            />
-            +6285822283507
-          </Link>
-        </DefaultAnimation>
+            <Link
+              href="https://wa.me/+6285822283507"
+              className="flex items-center"
+            >
+              <IconBrandWhatsapp
+                size={contactIconSize}
+                className="text-green-600 inline"
+              />
+              +6285822283507
+            </Link>
+          </motion.span>
+        </div>
       </Card>
     </Section>
   );

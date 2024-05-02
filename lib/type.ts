@@ -1,3 +1,6 @@
+import { ClassValue } from "clsx";
+import { ReactNode } from "react";
+
 type NavData = {
   link: string;
   name: string;
@@ -32,6 +35,11 @@ type ExperiencesData = {
   jobDescription: string;
 }[];
 
+type DefaultAnimationProps = {
+  className?: ClassValue;
+  children: ReactNode;
+};
+
 export type {
   ProjectData,
   NavData,
@@ -40,4 +48,5 @@ export type {
   PostsData,
   ProjectsData,
   ExperiencesData,
+  DefaultAnimationProps,
 };

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Card, CardTitle } from "./card";
-import { CardAnimation } from "./animation";
 import {
   IconBrandCss3,
   IconBrandFirebase,
@@ -97,30 +96,28 @@ function CardProject({
   };
 
   return (
-    <CardAnimation>
-      <Card className="overflow-hidden relative group">
-        <Image src={imgSrc} alt={projectName} width={1300} height={600} />
-        <div className="w-full h-full flex flex-col justify-center items-center gap-2 pb-4 px-4">
-          <CardTitle className="text-center text-lg">{projectName}</CardTitle>
-          <p className="text-center">{desc}</p>
-          <div className="text-center">
-            <p>Build with:</p>
-            <ul className="flex flex-wrap justify-center gap-x-4">
-              {buildWith?.map((item) => generateBuildWithElement(item, item))}
-            </ul>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <a href={siteLink} className="underline">
-              Live Site
-            </a>
-            <a href={githubLink} className="flex items-center underline">
-              <IconBrandGithubFilled size={15} /> Github
-            </a>
-          </div>
+    <Card className="overflow-hidden relative group">
+      <Image src={imgSrc} alt={projectName} width={1300} height={600} />
+      <div className="w-full h-full flex flex-col justify-center items-center gap-2 pb-4 px-4">
+        <CardTitle className="text-center text-lg">{projectName}</CardTitle>
+        <p className="text-center">{desc}</p>
+        <div className="text-center">
+          <p>Build with:</p>
+          <ul className="flex flex-wrap justify-center gap-x-4">
+            {buildWith?.map((item) => generateBuildWithElement(item, item))}
+          </ul>
         </div>
-      </Card>
-    </CardAnimation>
+
+        <div className="flex items-center gap-3">
+          <a href={siteLink} className="underline">
+            Live Site
+          </a>
+          <a href={githubLink} className="flex items-center underline">
+            <IconBrandGithubFilled size={15} /> Github
+          </a>
+        </div>
+      </div>
+    </Card>
   );
 }
 

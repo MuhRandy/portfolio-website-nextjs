@@ -2,26 +2,43 @@ import { Section, SectionTitle } from "./ui/section";
 import CardBlog from "./ui/card-blog";
 import { PostData, PostsData } from "@/lib/type";
 import data from "@/public/data.json";
+import { motion } from "framer-motion";
+import { defaultAnimation, fromRight } from "@/lib/animationVariants";
 
 function MyBlog() {
   const { posts }: { posts: PostsData } = data;
 
   return (
     <Section id="my-blog" className="gap-7">
-      <SectionTitle className="self-center">My Blog</SectionTitle>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
-        {posts?.map((post: PostData, index: number) => {
+      <SectionTitle className="self-center">
+        <motion.span
+          className="inline-block"
+          variants={defaultAnimation}
+          initial={{ opacity: 0 }}
+          whileInView="visible"
+        >
+          My Blog
+        </motion.span>
+      </SectionTitle>
+      <motion.div
+        variants={fromRight}
+        initial="hidden"
+        whileInView="visible"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2"
+      >
+        {posts.map((post: PostData, index: number) => {
           return (
-            <CardBlog
-              key={index}
-              title={post.title}
-              text={post.text}
-              date={post.date}
-              url={post.url}
-            />
+            <motion.div key={index} variants={fromRight}>
+              <CardBlog
+                title={post.title}
+                text={post.text}
+                date={post.date}
+                url={post.url}
+              />
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </Section>
   );
 }
