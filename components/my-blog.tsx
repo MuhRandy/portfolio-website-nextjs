@@ -16,6 +16,7 @@ function MyBlog() {
           variants={defaultAnimation}
           initial={{ opacity: 0 }}
           whileInView="visible"
+          viewport={{ once: true }}
         >
           My Blog
         </motion.span>
@@ -25,6 +26,7 @@ function MyBlog() {
         variants={fromRight}
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true }}
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2"
       >
         {posts.map((post: PostData, index: number) => {

@@ -21,6 +21,7 @@ function SkillAndExperience() {
             <motion.span
               variants={defaultAnimation}
               whileInView="visible"
+              viewport={{ once: true }}
               initial="fromTop"
               className="inline-block"
             >
@@ -34,6 +35,7 @@ function SkillAndExperience() {
               variants={defaultAnimation}
               initial="fromBottom"
               whileInView="visible"
+              viewport={{ once: true }}
               className="inline-block"
             >
               Having pursued a self-directed learning path in web development
@@ -55,6 +57,7 @@ function SkillAndExperience() {
           variants={defaultAnimation}
           initial="fromRight"
           whileInView="visible"
+          viewport={{ once: true }}
           className="w-full md:max-w-[50%] text-xl"
         >
           <ul className="md:flex md:flex-col gap-2 grid grid-cols-2 sm:grid-cols-3">

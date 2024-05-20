@@ -15,6 +15,7 @@ function MyWorks() {
           variants={defaultAnimation}
           initial={{ opacity: 0 }}
           whileInView="visible"
+          viewport={{ once: true }}
           className="inline-block"
         >
           My Works
@@ -29,6 +30,7 @@ function MyWorks() {
               variants={defaultAnimation}
               initial="fromRight"
               whileInView="visible"
+              viewport={{ once: true }}
             >
               <CardProject
                 projectName={project.projectName}

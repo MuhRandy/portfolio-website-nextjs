@@ -4,7 +4,7 @@ import { Section, SectionText, SectionTitle } from "./ui/section";
 import { Link } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { defaultAnimation } from "@/lib/animationVariants";
+import { defaultAnimation, fromLeft } from "@/lib/animationVariants";
 import { cn } from "@/lib/utils";
 
 function Home() {
@@ -31,14 +31,21 @@ function Home() {
         </SectionTitle>
 
         <SectionText>
-          I am an aspiring Web Developer. Now I live in Banjar, South
-          Kalimantan. If you are interested in working with me, you can contact
-          me to hire me.
+          <motion.span
+            variants={defaultAnimation}
+            animate="visible"
+            initial="fromLeft"
+            className="inline-block"
+          >
+            I am an aspiring Web Developer. Now I live in Banjar, South
+            Kalimantan. If you are interested in working with me, you can
+            contact me to hire me.
+          </motion.span>
         </SectionText>
 
         <motion.div
           variants={defaultAnimation}
-          whileInView="visible"
+          animate="visible"
           initial="fromRight"
           className="self-center"
         >
@@ -56,7 +63,7 @@ function Home() {
           <motion.div
             variants={defaultAnimation}
             initial="fromBottom"
-            whileInView="visible"
+            animate="visible"
           >
             <Button variant={"primary"}>Download CV</Button>
           </motion.div>
@@ -64,7 +71,7 @@ function Home() {
           <motion.div
             variants={defaultAnimation}
             initial="fromTop"
-            whileInView="visible"
+            animate="visible"
           >
             <Link to="contact" spy={true} smooth={true} duration={500}>
               <Button variant={"outlineSecondary"}>Contact Me</Button>
@@ -75,7 +82,7 @@ function Home() {
       {/* --- */}
 
       <motion.div
-        whileInView={{ rotate: 5 }}
+        animate={{ rotate: 5 }}
         initial={{ rotate: 0 }}
         transition={{ duration: 1, type: "spring" }}
       >

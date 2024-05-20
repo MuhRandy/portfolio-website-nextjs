@@ -12,6 +12,7 @@ function About() {
           variants={defaultAnimation}
           initial="fromLeft"
           whileInView="visible"
+          viewport={{ once: true }}
           className="inline-block"
         >
           About Me
@@ -23,6 +24,7 @@ function About() {
           variants={defaultAnimation}
           initial="fromRight"
           whileInView="visible"
+          viewport={{ once: true }}
           className="inline-block"
         >
           As a 2022 Mathematics graduate from Lambung Mangkurat University, I am
@@ -38,6 +40,7 @@ function About() {
         variants={defaultAnimation}
         initial="fromLeft"
         whileInView="visible"
+        viewport={{ once: true }}
       >
         <Button variant={"primary"}>
           Read More <IconArrowRight size={15} />

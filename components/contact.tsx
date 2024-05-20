@@ -26,6 +26,7 @@ function Contact() {
             variants={defaultAnimation}
             initial="fromTop"
             whileInView="visible"
+            viewport={{ once: true }}
             className="inline-block"
           >
             <Link
@@ -44,6 +45,7 @@ function Contact() {
             variants={defaultAnimation}
             initial="fromBottom"
             whileInView="visible"
+            viewport={{ once: true }}
             className="inline-block"
           >
             <Link
