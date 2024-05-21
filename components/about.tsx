@@ -43,7 +43,13 @@ function About() {
         viewport={{ once: true }}
       >
         <Button variant={"primary"}>
-          Read More <IconArrowRight size={15} />
+          <a
+            href="https://docs.google.com/document/d/1hIBQzHBIAcHxX6sC5b8NVqLpdS6w0uK7Ynj_wRlGvAY/edit?usp=sharing"
+            target="_blank"
+            className="flex items-center"
+          >
+            Read More <IconArrowRight size={15} />
+          </a>
         </Button>
       </motion.div>
     </Section>

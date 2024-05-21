@@ -6,6 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { defaultAnimation, fromLeft } from "@/lib/animationVariants";
 import { cn } from "@/lib/utils";
+import profil from "@/public/profil.jpg";
 
 function Home() {
   return (
@@ -65,7 +66,11 @@ function Home() {
             initial="fromBottom"
             animate="visible"
           >
-            <Button variant={"primary"}>Download CV</Button>
+            <Button variant={"primary"}>
+              <a href="https://docs.google.com/document/export?format=pdf&id=1hIBQzHBIAcHxX6sC5b8NVqLpdS6w0uK7Ynj_wRlGvAY">
+                Download CV
+              </a>
+            </Button>
           </motion.div>
 
           <motion.div
